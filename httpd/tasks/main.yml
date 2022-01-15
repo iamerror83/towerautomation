@@ -1,0 +1,11 @@
+- name: Install Apache Web Server
+  yum: pkg={{ redhat_apache }} state=latest
+  when: "{{ redhat_os }}" 
+- shell: systemctl status httpd
+  register: result
+  until:  result.stdout.find("active (running)") != -1
+  retries: 5
+  delay: 5
+- debug: var=result
+  notify: Restart HTTPD
+  ignore_errors: yes

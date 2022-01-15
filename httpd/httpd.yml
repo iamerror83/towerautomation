@@ -1,0 +1,6 @@
+--- # Master Playbook for Web Servers
+- hosts: httpd
+  sudo: yes
+  gather_facts: yes
+  roles:
+    - httpd

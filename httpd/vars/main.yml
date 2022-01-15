@@ -1,0 +1,5 @@
+copyright_msg: Copyright 2019
+redhat_apache: httpd
+debian_apache: apache2
+redhat_os: ansible_os_family == 'RedHat' or ansible_os_family == 'CentOS'
+debian_os: ansible_os_family == 'Debian'
