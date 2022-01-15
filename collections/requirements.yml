@@ -1,0 +1,4 @@
+---
+collections:
+  - name: aminvakil.lamp
+    source: https://galaxy.ansible.com/
